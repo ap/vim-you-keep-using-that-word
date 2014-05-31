@@ -1,0 +1,23 @@
+*ykutw.txt* Make cw consistent with dw, yw, et al
+
+		YOU KEEP USING THAT WORD  by Aristotle Pagaltzis
+
+                                                    *you-keep-using-that-word*
+This plugin removes the |cw| special exception for word motion. It does not do
+anything else, and it has no configuration options.
+
+
+==============================================================================
+1. Details of operation                                 *ykutw-=* *ykutw-details*
+
+This plugin adds a new motion "=" which always works just like "|w|", and then
+redirects any use of the "|w|" motion with the "|c|" command to use this new "="
+motion instead.
+
+
+==============================================================================
+2. Source                                                        *ykutw-source*
+
+https://github.com/ap/vim-you-keep-using-that-word
+
+vim:tw=78:et:ft=help:norl:
