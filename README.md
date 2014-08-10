@@ -17,7 +17,3 @@ in order to do what you normally would use `cw` for.
 
 This plugin removes the special exception for `cw`. It does nothing else, and
 it has no configuration options.
-
-(Under the hood, it adds a new motion `=` which always works just like `w`,
-and then redirects any use of the `w` motion with the `c` command to use this
-new `=` motion instead.)
