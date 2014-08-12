@@ -24,9 +24,9 @@
 if exists('g:loaded_ykutw') | finish | endif
 let g:loaded_ykutw = 1
 
-function s:DoWordMotion()
+function s:DoWordMotion(wordmotion, endmotion)
 	let before = line('.')
-	execute 'normal! v'.v:count1.'w'
+	execute 'normal! v'.v:count1.a:wordmotion
 
 	" when the cursor wraps, we must check whether it went too far
 	if line('.') != before
@@ -34,7 +34,7 @@ function s:DoWordMotion()
 		" and then see if we stay on the same line
 		let target = winsaveview()
 		let before = line('.')
-		exe 'normal! ge'
+		exe 'normal! g'.a:endmotion
 		if line('.') != before
 			" we are now at the end of the word at the end of previous line,
 			" which is exactly where we want to be
@@ -50,6 +50,7 @@ function s:DoWordMotion()
 	execute 'normal! h'
 endfunction
 
-onoremap w :<C-U>call <SID>DoWordMotion()<CR>
+onoremap w :<C-U>call <SID>DoWordMotion('w','e')<CR>
+onoremap W :<C-U>call <SID>DoWordMotion('W','E')<CR>
 
 " vim: fdm=marker fmr={{{,}}}
