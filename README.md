@@ -13,7 +13,7 @@ thinks it means. As the documentation says:
 
 But you can already do the same yourself by using `ce` and `cE`, whereas this
 supposedly helpful exception leaves you using workarounds such as `cf<Space>`
-in order to do what you normally would use `cw` for.
+in order to do what you normally would use `cw` or `cW` for.
 
-This plugin removes the special exception for `cw`. It does nothing else, and
-it has no configuration options.
+This plugin removes the special exception from `cw`/`cW`. It does nothing else,
+and it has no configuration options.
