@@ -17,3 +17,10 @@ in order to do what you normally would use `cw` or `cW` for.
 
 This plugin removes the special exception from `cw`/`cW`. It does nothing else,
 and it has no configuration options.
+
+
+Credits
+-------
+
+Thanks to Josh Howe (@joshtch) for pointing out my omission of the WORD motion
+in the initial release of this plugin.
